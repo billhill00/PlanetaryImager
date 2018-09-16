@@ -23,6 +23,7 @@
 #include <functional>
 #include <QSpinBox>
 #include <QMessageBox>
+#include <QButtonGroup>
 #include "Qt/qt_strings_helper.h"
 #include "Qt/qt_functional.h"
 

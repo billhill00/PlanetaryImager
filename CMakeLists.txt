@@ -25,13 +25,7 @@ include_directories(${Qt5Widgets_INCLUDE_DIRS} ${Qt5PrintSupport_INCLUDE_DIRS})
 add_definitions(-DSRC_DIR="${CMAKE_SOURCE_DIR}")
 
 find_package(Boost REQUIRED)
-if(${CMAKE_SYSTEM_NAME} STREQUAL "Windows")
-    message(STATUS "Temporary workaround for Windows build - MXE BUG https://github.com/mxe/mxe/issues/1576#issuecomment-263007248")
-    include_directories(/opt/opencv/include/opencv2/)
-    set(OpenCV_LIBS opencv_core opencv_imgproc opencv_highgui opencv_video CACHE INTERNAL "")
-else()
-    find_package(OpenCV REQUIRED )
-endif()
+find_package(OpenCV REQUIRED )
 #find_package(QCustomPlot REQUIRED)
 
 
